@@ -1,0 +1,1 @@
+{"name":"haruthai-jutharat-academy","version":"1.0.0","private":true,"description":"เว็บไซต์สถาบันเสริมทักษะหฤทัยจุทาราชห์","scripts":{"start":"node serve.mjs"}}
