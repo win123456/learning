@@ -16,3 +16,5 @@ header.header{z-index:30}
 .bear-floater{width:clamp(82px,9vw,122px);opacity:.38;animation:none!important;left:0;right:auto;top:0;bottom:auto;will-change:transform;filter:saturate(.95)}
 .bear-floater-a{width:clamp(88px,9vw,126px)}.bear-floater-b{width:clamp(96px,10vw,140px)}.bear-floater-c{width:clamp(82px,8vw,116px)}
 @media(max-width:700px){.bear-floater{opacity:.3}.bear-floater-a{width:76px}.bear-floater-b{width:84px}.bear-floater-c{width:72px}.bear-floater-d,.bear-floater-e{display:none}}
+
+.hero-tagline{margin-top:14px;color:#c35f8c;font-size:clamp(18px,2vw,24px);font-weight:600;letter-spacing:.01em}.hero .intro{margin-top:12px}
