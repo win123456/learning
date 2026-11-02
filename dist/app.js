@@ -96,5 +96,5 @@ document.querySelector('[data-game-fullscreen]')?.addEventListener('click', asyn
 // Preview the local game changes alongside the local academy website.
 if (['localhost', '127.0.0.1'].includes(location.hostname)) {
   const localGame = document.querySelector('.academy-game-frame');
-  if (localGame) localGame.src = 'http://127.0.0.1:5173/';
+  if (localGame) localGame.src = 'http://127.0.0.1:5173/?embed=1';
 }
