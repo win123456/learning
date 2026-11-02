@@ -78,3 +78,23 @@ document.querySelector('[data-copy-line]')?.addEventListener('click', async () =
   });
   requestAnimationFrame(animate);
 })();
+
+// Let the embedded game use the available screen on supported devices.
+document.querySelector('[data-game-fullscreen]')?.addEventListener('click', async () => {
+  const frame = document.querySelector('.academy-game-frame');
+  const message = document.querySelector('.game-message');
+  try {
+    if (!frame.requestFullscreen) throw new Error('Fullscreen unavailable');
+    await frame.requestFullscreen();
+    frame.focus();
+    message.textContent = '';
+  } catch {
+    message.textContent = 'อุปกรณ์นี้ไม่รองรับการเปิดเต็มหน้าจอจากหน้านี้ กรุณากดเปิดเกมแยก';
+  }
+});
+
+// Preview the local game changes alongside the local academy website.
+if (['localhost', '127.0.0.1'].includes(location.hostname)) {
+  const localGame = document.querySelector('.academy-game-frame');
+  if (localGame) localGame.src = 'http://127.0.0.1:5173/';
+}
